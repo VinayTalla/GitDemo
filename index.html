@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <head>    
+	<link rel ="stylesheet" href = "style.css" type = "text/css">
+	<script>
+	function validateForm() {
+  	 	 var x = document.forms["myForm"]["user"].value;
+		var y = document.forms["myForm"]["pwd"].value;
+  		  if (x == "" || y == "") {
+  		      alert("Name  and password must be filled out");
+    			    return false;
+  		  }else if(x !== "karunakar" || y !== "12345"){
+			alert("incorrect username, password");
+			return false;
+		}else{
+			
+			window.location.href="/home.html";
+		}
+	}
+	
+	function redirect(){
+		window.location = "registrationformview.html";
+	}
+	
+</script>
+    </head>
+    <body>
+        <div id = "wrapper">
+	   <header><h1 align="center"><font aface="verdana" color="blue" >This Is My Samply Project </font></h1></header>
+	   <lside><img src ="img/greyRose.jpg" width="270" height="442" alt="grey"></lside>
+             <section>
+	      <div id = "frm">
+       		<form name="myForm" action="LoginServlet" onsubmit="return validateForm()" method="post" >
+			<h2>login Form</h2>
+		    	<label>User Name</label>
+			<input type = "text" name="user"><br>
+		    	<label>Possword</label>
+			<input type = "text" name="pwd"><br> 
+		        <input type="submit" value="Login"></form>
+			<button id ="button" onClick="redirect()">SignUp</button>
+
+		  
+	      </div>
+	    </section>	   
+	   <aside><img src ="img/blueRose.jpg" width="270" height="442" alt="blue"></aside>
+	   <footer><h6 align="center" fonr>T&C copy Rights@2017 www.mobiworldhub.com</h6></footer>
+	</div>
+    </body>	
+</html>
